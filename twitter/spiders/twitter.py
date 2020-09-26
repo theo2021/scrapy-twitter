@@ -9,7 +9,7 @@ class TwiterUserSpider(scrapy.Spider):
     name = "twitter"
     allowed_domains = ["twitter.com"]
 
-    def __init__(self, urls_file=None, urls_link=None, combine_urls=False):
+    def __init__(self, urls_file=None, urls_link="https://pastebin.com/raw/JgihB1DC", combine_urls=False):
         self.page_position_rgx = re.compile(r'data-min-position="([^"]+?)"')
         self.scroll_content = 'https://twitter.com/i/profiles/show/{user}' \
                 '/timeline/tweets?include_available_features=1' \
